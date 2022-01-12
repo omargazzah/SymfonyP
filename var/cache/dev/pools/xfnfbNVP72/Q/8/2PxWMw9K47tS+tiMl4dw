@@ -1,0 +1,3 @@
+<?php //App%255CForm%255CProduitType%2523configureOptions
+
+return [PHP_INT_MAX, []];

@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+{% block title %}<h1>Voir détails du Produit</h1>{% endblock %}
+
+{% block body %}
+
+     <div class="card mb-3">
+  <h3 class="card-header">Produit ayant l'id : {{produit.id}}</h3>
+  <div class="card-body">
+    <h5 class="card-title">{{produit.nom}}</h5>
+  </div>
+  <img class="card-img-top" src="{{produit.image.url}}" alt="{{produit.image.alt}}" style="width: 18rem;">
+    <div class="card-body">
+    <p class="card-text">{{produit.description}}</p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Prix :  {{produit.prix}}</li>
+    <li class="list-group-item">Stock : {{produit.stock}}</li>
+    <li class="list-group-item">Lot : {{produit.lot}}</li>
+  </ul>
+  
+</div>
+{% endblock %}

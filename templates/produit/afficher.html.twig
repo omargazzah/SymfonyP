@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+{% if produits %}
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">Nom</th>
+      <th scope="col">Lot</th>
+      <th scope="col">Prix</th>
+      <th scope="col">Stock</th>
+      <th scope="col">Disponibilite</th>
+      <th scope="col">DETAILS</th>
+      <th scope="col">MODIFIER</th>
+
+    </tr>
+  </thead>
+  <tbody>
+  {% for produit in produits %}
+    <tr class="table-success">
+      <th scope="row">{{produit.getNom()}}</th>
+      <td>{{produit.getLot()}}</td>
+      <td>{{produit.getPrix()}}</td>
+      <td>{{produit.getStock()}}</td>
+      <td>{{produit.getDisponibilite()}}</td>
+      <td><a href="/voir/{{ produit.id }}" class="btn btn-outline-primary">Détails</a></td>
+      <td><a href="/modifier/{{ produit.id }}" class="btn btn-outline-primary">MODIFIER</a></td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endif %}
+{% endblock %}

@@ -1,0 +1,10 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+<h2 class="text-primary" style="text-align:center">Ajouter un nouveau Produit</h2>
+<div class="form-group">
+   {{ form_start(form) }}
+     {{ form_widget(form) }}
+    <button type="Submit" class="btn btn-outline-primary">Creer</button>
+   {{ form_end(form) }}
+</div>
+{% endblock %}
